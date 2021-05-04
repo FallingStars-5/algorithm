@@ -20,28 +20,28 @@ public class SortCompare {
     public static void main(String[] args) throws Exception {
         //向文本文件中写入数据
         File file = null;
-        FileWriter fw = null;
+//        FileWriter fw = null;
         file = new File("\\test_date.txt");
-        try{
-            if (!file.exists()){
-                file.createNewFile();
-            }
-            fw = new FileWriter(file);
-            for (int i=100000;i>0;i--){
-                fw.write(i+"\n");
-                fw.flush();
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }finally {
-            if (fw!=null){
-                try{
-                    fw.close();
-                }catch (IOException e){
-                    e.printStackTrace();
-                }
-            }
-        }
+//        try{
+//            if (!file.exists()){
+//                file.createNewFile();
+//            }
+//            fw = new FileWriter(file);
+//            for (int i=100000;i>0;i--){
+//                fw.write(i+"\n");
+//                fw.flush();
+//            }
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }finally {
+//            if (fw!=null){
+//                try{
+//                    fw.close();
+//                }catch (IOException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
 
 
         //1.创建一个ArrayList集合，保存读取出的待排序数据
@@ -60,11 +60,13 @@ public class SortCompare {
 //        }
 
         //3.把ArrayList集合转换成数组
-        Integer[] a = new Integer[list.size()];
-        list.toArray(a);
-        //4.调用测试代码完成测试
-        testInsertion(a);
-        testShell(a);
+//        Integer[] a = new Integer[list.size()];
+//        list.toArray(a);
+//        //4.调用测试代码完成测试
+//        testInsertion(a);
+        Integer[] b = new Integer[list.size()];
+        list.toArray(b);
+        testShell(b);
     }
 
     /**
