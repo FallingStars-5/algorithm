@@ -17,6 +17,7 @@ public class Shell {
         while (h<a.length/2){
             h=2*h+1;
         }
+
         //2.希尔排序
         while (h>=1){
             //排序

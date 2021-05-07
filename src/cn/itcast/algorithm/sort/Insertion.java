@@ -1,6 +1,6 @@
 package cn.itcast.algorithm.sort;
 
-/**
+/**插入排序算法
  * @author 落星
  */
 public class Insertion {

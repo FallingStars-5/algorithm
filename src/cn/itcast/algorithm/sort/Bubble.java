@@ -1,6 +1,6 @@
 package cn.itcast.algorithm.sort;
 
-/**
+/**冒泡排序
  * @author 落星
  */
 public class Bubble {
@@ -11,8 +11,13 @@ public class Bubble {
      */
     public static void sort(Comparable[] a){
 
+        //定义boolean型变量，用于判断在一趟冒泡中是否存在元素交换
         boolean isChanged = false;
+
+        //外层循环从最后一个元素到第二个元素（只剩一个元素时不需要再冒泡）遍历待排序数组
         for (int i = a.length-1;i>0;i--){
+
+            //内层循环从第一个元素到第i个元素，从前往后冒泡，将本次冒泡中局部最大的元素放到第i个位置
             for (int j=0;j<i;j++){
                 if (greater(a[j],a[j+1])){
                     exch(a,j,j+1);
